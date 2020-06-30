@@ -224,19 +224,10 @@ class DailyCP:
 if __name__ == "__main__":
     if len(sys.argv) != 6:
         print("python3 DailyCp.py 学校全名 学号 密码 定位地址 formdb文件夹绝对路径")
-        # exit()
-    # app = DailyCP(sys.argv[1])
-    app = DailyCP ('安徽理工大学')
-    if not app.login ('2017304619','331122aa'): exit ()
-    app.autoComplete('120.958407,28.084092','/Users/hyacinth/PycharmProjects/FuckDailyCP/formdb')
-    # if not app.login(sys.argv[2], sys.argv[3]):exit()
-    # app.autoComplete(sys.argv[4],sys.argv[5])
-
-# Author:HuangXu,FengXinYang,ZhouYuYang.
-# By:AUST HACKER
-
-#2020/5/20 重要更新：修复登录过程，移除验证码（不需要），优化代码格式，感谢giteee及时反馈。
-#2020/5/28 更改为使用自动获取学校URL的方式，更改为使用参数形式，添加另一种登录形式AuthServer的支持(已完成但未测试)。感谢柠火的反馈。
-#2020/6/1 修复BUG，发现AuthServer的登录方式每个学校都不一样。支持任意表单内容自定义（详情见输出信息和formdb/1129.json）。感谢涅灵的反馈。
-#2020/6/2 AuthServer的登录网址不再使用硬编码的方式，理论上能支持所有学校了吧？感谢涅灵的反馈。
-#2020/6/17 修复crontab使用中相对路径的问题。识别form特征。
+        exit()
+    app = DailyCP(sys.argv[1])
+    # app = DailyCP ('安徽理工大学')
+    # if not app.login ('2017304619','331122aa'): exit ()
+    # app.autoComplete('120.958407,28.084092','/Users/hyacinth/PycharmProjects/FuckDailyCP/formdb')
+    if not app.login(sys.argv[2], sys.argv[3]):exit()
+    app.autoComplete(sys.argv[4],sys.argv[5])
