@@ -225,7 +225,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 6:
         print("python3 DailyCp.py 学校全名 学号 密码 定位地址 formdb文件夹绝对路径")
         exit()
-    print('参数正确使用')
+    print('参数正确使用',sys.argv[1],sys.argv[2],sys.argv[3],sys.argv[4],sys.argv[5])
     app = DailyCP(sys.argv[1])
     # app = DailyCP ('安徽理工大学')
     # if not app.login ('2017304619','331122aa'): exit ()
