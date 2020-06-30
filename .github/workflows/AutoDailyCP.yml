@@ -48,7 +48,7 @@ jobs:
           ADDRESS: ${{ secrets.ADDRESS }}
           FORM_PATH: ${{ secrets.FORM_PATH }}
         run: |
-          - python3 DailyCP.py '安徽理工大学' '2017304619' '331122aa' '120.958407,28.084092' './formdb'
+          python3 DailyCP.py '安徽理工大学' '2017304619' '331122aa' '120.958407,28.084092' './formdb'
 #          python3 DailyCP.py ${SCHOOL_NAME} ${ACCOUNT} ${PASSWORD} ${ADDRESS} ${FORM_PATH}
       - name : Upload formdb
         uses: actions/upload-artifact@master
